@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 django = "*"
 pillow = "*"
+pytest = "*"
+pytest-django = "*"
 
 [dev-packages]
 faker = "*"

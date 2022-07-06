@@ -8,6 +8,7 @@ django = "*"
 pillow = "*"
 pytest = "*"
 pytest-django = "*"
+parameterized = "*"
 
 [dev-packages]
 faker = "*"

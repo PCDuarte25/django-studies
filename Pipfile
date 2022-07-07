@@ -9,6 +9,7 @@ pillow = "*"
 pytest = "*"
 pytest-django = "*"
 parameterized = "*"
+coverage = "*"
 
 [dev-packages]
 faker = "*"

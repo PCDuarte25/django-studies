@@ -3,8 +3,6 @@ from django.shortcuts import get_list_or_404, get_object_or_404, render
 
 from recipes.models import Recipe
 
-# from utils.recipes.factory import make_recipe
-
 
 def home(request):
     recipes = Recipe.objects.filter(
@@ -41,9 +39,11 @@ def recipe(request, id):
 
 
 def search(request):
-    search_term = request.GET.get('q')
+    search_term = request.GET.get('q', '').strip()
 
     if not search_term:
         raise Http404()
 
-    return render(request, 'recipes/pages/search.html')
+    return render(request, 'recipes/pages/search.html', context={
+        'page_title': f'Pesquisa por "{search_term}" |',
+    })
